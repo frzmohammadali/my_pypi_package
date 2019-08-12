@@ -12,7 +12,11 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/frzmohammadali/my_pypi_package",
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages(exclude=['contrib', 'docs', 'tests']),
+    install_requires=[
+        'numpy>=1.17.0',
+        'requests>=2.22.0'
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
